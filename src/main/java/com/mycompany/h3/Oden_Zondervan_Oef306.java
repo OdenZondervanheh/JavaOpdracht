@@ -12,12 +12,13 @@ import javafx.scene.control.Button;
 import java.awt.*;
 
 public class Oden_Zondervan_Oef306 {
-    private final Button plusknop, keerknop, clearknop, deelknop, modulesknop;
+    private final Button plusknop, keerknop, clearknop, minknop, deelknop, modulesknop;
     private final TextField invoervak1, invoervak2, resultaatvak;
 
     public Oden_Zondervan_Oef306(Pane p) {
         plusknop = new Button( "+" );
         keerknop = new Button( "x" );
+        minknop = new Button( " - " );
         deelknop = new Button( "/" );
         modulesknop = new Button( "%" );
         clearknop =  new Button("C");
@@ -32,7 +33,8 @@ public class Oden_Zondervan_Oef306 {
         keerknop.relocate(50, 80);
         deelknop.relocate(80, 80);
         modulesknop.relocate(110, 80);
-        clearknop.relocate(140, 80);
+        minknop.relocate(140, 80);
+        clearknop.relocate(170, 80);
         resultaatvak.relocate(20, 110);
 
         invoervak1.setAlignment(Pos.CENTER_RIGHT);
@@ -59,6 +61,16 @@ public class Oden_Zondervan_Oef306 {
             resultaatvak .setText(""+resultaat);
         });
 
+        minknop.setOnAction( event -> {
+            String invoer1 = invoervak1.getText();
+            int getal1 = Integer.parseInt(invoer1);
+            String invoer2 = invoervak2.getText();
+            int getal2 = Integer.parseInt(invoer2);
+
+            int resultaat = getal1 - getal2;
+            resultaatvak .setText(""+resultaat);
+        });
+
         deelknop.setOnAction( event -> {
             String invoer1 = invoervak1.getText();
             int getal1 = Integer.parseInt(invoer1);
@@ -76,9 +88,8 @@ public class Oden_Zondervan_Oef306 {
             String invoer2 = invoervak2.getText();
             int getal2 = Integer.parseInt(invoer2);
 
-            int resultaat = getal1 / getal2;
             int resultaat2 = getal1 % getal2;
-            resultaatvak.setText(resultaat + " Met zoveel over "+resultaat2);
+            resultaatvak.setText(""+resultaat2);
 
         });
 
@@ -90,7 +101,7 @@ public class Oden_Zondervan_Oef306 {
 
         //Pane p componenten
         p.getChildren(). addAll( invoervak1, invoervak2,
-                plusknop, keerknop, clearknop, deelknop, modulesknop, resultaatvak);
+                plusknop, keerknop, minknop,  clearknop, deelknop, modulesknop, resultaatvak);
     }
 
 
