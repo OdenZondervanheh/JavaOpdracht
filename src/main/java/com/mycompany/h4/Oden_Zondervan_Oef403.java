@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -13,7 +15,8 @@ import java.math.BigInteger;
 
 public class Oden_Zondervan_Oef403 {
     private int jaartal;
-    private double populatie, populatieincrease;
+    private double populatieincrease;
+    private long populatie;
     private final Text jaartaltext, popultatietext;
     private final Button jaaromhoog;
 
@@ -28,7 +31,7 @@ public class Oden_Zondervan_Oef403 {
         jaaromhoog.setOnAction(actionEvent -> {
             jaartal += 1;
             populatieincrease = populatie * 0.0165;
-            populatie += populatieincrease;
+            populatie += (long) populatieincrease;
 
             jaartaltext.setText("" + jaartal);
             popultatietext.setText("" + populatie);
@@ -38,8 +41,8 @@ public class Oden_Zondervan_Oef403 {
         p.add(popultatietext,0,1);
         p.add(jaaromhoog,0,2);
 
-
-
+        jaartaltext.setFont(Font.font("Arial", FontWeight.BOLD, 25));
+        popultatietext.setFont(Font.font("Arial", FontWeight.BOLD, 25));
     }
 
     // Toegevoegd voor convenience (anders moet je {naam}$launcher doen voor run)
