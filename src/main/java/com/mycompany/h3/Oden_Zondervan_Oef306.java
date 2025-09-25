@@ -122,7 +122,7 @@ public class Oden_Zondervan_Oef306 {
             new Oden_Zondervan_Oef306(root);
 
             stage.setScene(scene);
-            stage.setTitle("Opdrachten 3.03 en 23.04");
+            stage.setTitle("Java opdracht");
             stage.show();
         }
 
