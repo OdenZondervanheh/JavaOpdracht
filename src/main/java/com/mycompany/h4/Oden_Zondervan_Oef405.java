@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -27,7 +29,9 @@ public class Oden_Zondervan_Oef405 {
         resultaat = dobbelsteen.gooi();
         resultaat2 = dobbelsteen2.gooi();
 
-        resultaatText.setText("" + resultaat + " " + resultaat2);
+        resultaatText.setText("" + resultaat + " en " + resultaat2);
+        resultaatText.setFont(Font.font("Arial", FontWeight.BOLD, 36));
+
 
         p.add(resultaatText,0,2);
         p.add(random,0,3);
@@ -36,7 +40,7 @@ public class Oden_Zondervan_Oef405 {
             resultaat = dobbelsteen.gooi();
             resultaat2 = dobbelsteen2.gooi();
 
-            resultaatText.setText("" + resultaat + " " + resultaat2);
+            resultaatText.setText("" + resultaat + " en " + resultaat2);
         });
     }
 
