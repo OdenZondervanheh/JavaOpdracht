@@ -13,7 +13,6 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 
 public class Oden_Zondervan_Oef0514 {
     private final Label Uitlegtext;

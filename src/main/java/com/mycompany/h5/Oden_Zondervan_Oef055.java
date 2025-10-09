@@ -4,21 +4,17 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Oden_Zondervan_Oef055 {
 //    private final TextField tekstfield;
     private String regel;
-    private  Text tekst, titel;
-    private Double getalletje;
+    private Text tekst, titel;
+    private Double getallen;
 
     Oden_Zondervan_Oef055(GridPane p){
         regel = "De tafel van 13";
@@ -26,11 +22,11 @@ public class Oden_Zondervan_Oef055 {
         titel = new Text(regel);
         titel.setFont(Font.font("Monospaced", 14));
         p.add(titel, 0,0);
-        getalletje = 10.00;
+        getallen = 10.00;
 
         for( int i = 1; i <= 8; i++) {
-            getalletje += 0.25;
-            regel = String.format("%2d %3s", i, getalletje);
+            getallen += 0.25;
+            regel = String.format("%2d %3s", i, getallen);
             tekst = new Text(regel);
             tekst.setFont(Font.font("Monospaced", 12));
             p.add(tekst,0,i);

@@ -15,8 +15,8 @@ public class Oden_Zondervan_Oef0512 {
 
     public Oden_Zondervan_Oef0512(GridPane p) {
         Tekstvak = new TextField();
-        Tekst = new Text("yooo");
-        Resultaat = new Text("");
+        Tekst = new Text("Romeinse cijfers");
+        Resultaat = new Text("Resultaat: ");
 
         Tekstvak.setOnAction(event -> {
             Getal = Integer.parseInt(Tekstvak.getText());

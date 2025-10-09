@@ -11,15 +11,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Oden_Zondervan_Oef0513 {
-    private Text resultaattext, text, titel;
+    private Text resultaattekst, text;
     private String regels;
     private int getal, voriggetal, huidiggetal ;
 
 
     public Oden_Zondervan_Oef0513(GridPane p){
-        resultaattext = new Text("");
+        resultaattekst = new Text("");
         text = new Text("");
-        titel = new Text("");
         getal = 1;
         voriggetal = 0;
         huidiggetal = 1;
@@ -32,8 +31,8 @@ public class Oden_Zondervan_Oef0513 {
             p.add(text,0,i);
 
 
-            float goontient = (float) huidiggetal / voriggetal;
-            regels = String.format("%2d / %2d = %.2f" , huidiggetal, voriggetal, goontient);
+            float quotient = (float) huidiggetal / voriggetal;
+            regels = String.format("%2d / %2d = %.2f" , huidiggetal, voriggetal, quotient);
             text = new Text(regels);
             text.setFont(Font.font("Monospaced", 12));
             p.add(text, 1,i );

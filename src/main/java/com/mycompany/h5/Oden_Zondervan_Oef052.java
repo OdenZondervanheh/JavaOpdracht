@@ -1,6 +1,5 @@
 package com.mycompany.h5;
 
-import com.mycompany.h4.Oden_Zondervan_Oef406;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,20 +23,20 @@ public class Oden_Zondervan_Oef052
         invoervak1 = new TextField();
         invoervak2 = new TextField();
         invoervak3 = new TextField();
-        berekeningButton = new Button("yo yo yo button");
+        berekeningButton = new Button("Bereken");
         resultaatText = new Text();
 
         resultaatText.setFont(Font.font("Arial", FontWeight.BOLD, 20));
 
         berekeningButton.setOnAction(event ->{
             String invoervakje1 = invoervak1.getText();
-            int getalletje1 = Integer.parseInt(invoervakje1);
+            int getallen1 = Integer.parseInt(invoervakje1);
             String invoervakje2 = invoervak2.getText();
-            int getalletje2 = Integer.parseInt(invoervakje2);
+            int getallen2 = Integer.parseInt(invoervakje2);
             String invoervakje3 = invoervak3.getText();
-            int getalletje3 = Integer.parseInt(invoervakje3);
+            int getallen3 = Integer.parseInt(invoervakje3);
 
-            int[] getalArray = {getalletje1, getalletje2, getalletje3};
+            int[] getalArray = {getallen1, getallen2, getallen3};
             Arrays.sort(getalArray);
 
             resultaatText.setText(Arrays.toString(getalArray));
