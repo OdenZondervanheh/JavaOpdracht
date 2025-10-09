@@ -24,22 +24,27 @@ public class Oden_Zondervan_Oef0513 {
         voriggetal = 0;
         huidiggetal = 1;
 
-        regels = String.format("%2d", 1);
-        text = new Text(regels);
-        text.setFont(Font.font("Monospaced", 12));
-        p.add(text,0,0);
 
         for(int i = 1; i<= 15; i++){
-            int getal = voriggetal + huidiggetal;
-            voriggetal = huidiggetal;
-            huidiggetal = getal;
-            regels = String.format("%2d", getal);
+            regels = String.format("%2d", huidiggetal);
             text = new Text(regels);
             text.setFont(Font.font("Monospaced", 12));
             p.add(text,0,i);
+
+
+            float goontient = (float) huidiggetal / voriggetal;
+            regels = String.format("%2d / %2d = %.2f" , huidiggetal, voriggetal, goontient);
+            text = new Text(regels);
+            text.setFont(Font.font("Monospaced", 12));
+            p.add(text, 1,i );
+
+            int getal = voriggetal + huidiggetal;
+            voriggetal = huidiggetal;
+            huidiggetal = getal;
         }
 
         p.setVgap(5);
+        p.setHgap(50);
         p.setPadding(new Insets(20,50,30,50));
         p.setAlignment(Pos.CENTER);
     }
